@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.io.PrintWriter" %><%--
   Created by IntelliJ IDEA.
   User: vaceslavfilippov
   Date: 24.05.2020
@@ -12,11 +12,12 @@
 </head>
 <body>
     <h1 align="center">Testing JSP</h1>
-    <p>
-        <%@ page import="java.util.Date,logic.TestClass" %><!--директива позволяет задавать действия контейнеру-->
-        <%= new Date() %>
-    <p align="center" ><%=new TestClass().getInfo()%> </p>
-
+    <%
+        String name = request.getParameter("name");
+        String surName = request.getParameter("surname");
+    %>
+    <p align="center">
+        <%="<h1 align=\"center\">Hello, " + name + " " + surName + "!</h1>"%>
     </p>
 </body>
 </html>
