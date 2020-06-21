@@ -12,12 +12,5 @@
 </head>
 <body>
     <h1 align="center">Testing JSP</h1>
-    <%
-        String name = request.getParameter("name");
-        String surName = request.getParameter("surname");
-    %>
-    <p align="center">
-        <%="<h1 align=\"center\">Hello, " + name + " " + surName + "!</h1>"%>
-    </p>
 </body>
 </html>
